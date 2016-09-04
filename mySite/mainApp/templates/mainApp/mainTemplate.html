@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en-us">
+    <head>
+    <title>omer website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="description" content="omer website">
+    <meta name="keywords" content="fasion">
+    <meta name="author" content="eyal">
+
+
+    <link rel="stylesheet" type="text/css" href={% static "mainApp/head.css" %}>
+
+
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+    <link rel="stylesheet" href="path/to/font-mfizz/font-mfizz.css">
+    <script src="head_nav_footer.js"></script>
+    </head>
+
+    <body>
+        <div id="main_div">
+            <h1>Roni's Blog</h1>
+            <h3>welcome to the playground</h3>
+            <nav class="sidenav">
+              
+              <ul id="nav_ul">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Posts</a></li>
+                <li><a href="#">Side Projects</a></li>
+                <li><a href="#">Tools</a></li>
+                <li><a href="#">Others</a></li>
+                <li><a href="#">Contact Me</a></li>
+              </ul>
+            </nav>
+        
+
+
+
+            
+            <p> Hello and welcome to my site<br>Here i will test and write what i learned in the proccess<br>Hope you will enjoy</p>
+            <i class="devicon-python-plain-wordmark"></i>
+            <i class="devicon-mysql-plain-wordmark colored"></i>
+            <i class="devicon-redis-plain-wordmark colored"></i>
+            <i class="devicon-ubuntu-plain-wordmark colored"></i>
+            <i class="devicon-vim-plain colored"></i>
+
+
+
+            <footer class="footer">
+                <div class="clearfix" id="upper_footer">
+                    <div id="upper_footer_social_links">
+                        <h4>Look For Me!</h4>
+                        <div id="upper_footer_social_icons">
+                            <a href="#"><i class="fa fa-github" style="font-size:24px"></i></a>
+                            <a href="#"><i class="fa fa-facebook" style="font-size:24px"></i></a>
+                            <a href="#"><i class="fa fa-stack-overflow" style="font-size:24px"></i></a>
+                            <a href="#"><i class="fa fa-linkedin-square" style="font-size:24px"></i></a>
+                        </div>
+                    </div>
+                    <div id="upper_footer_nav">
+                        <ul id="footer_nav">
+                            <li>Support</li>
+                            <li>Terms of Service</li>
+                            <li>privacy</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <div id="lower_footer">
+                    <select id="select_language_dropdown" name="Select Language">
+                      <option value="volvo">English</option>
+                      <option value="saab">Hebrew</option>
+                    </select>
+                    <p>&copy; All Roni Bla. All rights reserved.</p>
+                    <p id="aaa"></p>
+
+                </div>
+            </footer>
+
+
+
+        </div>
+
+
+
+        <script>
+            (function () {
+                var previous;
+
+                $("#select_language_dropdown").focus(function () {
+                    previous = this.value;
+                })
+                $("#select_language_dropdown").change(function() {
+                    var tmp = (window.location.href).replace(previous, this.value);
+                    previous = this.value;
+                    window.location.href = tmp;
+                    document.getElementById("aaa").innerHTML = tmp;
+                });
+            })();
+
+        </script>
+
+    </body>
+
+</html>
